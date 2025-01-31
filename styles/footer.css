@@ -2,6 +2,7 @@
     --footer-bg: #d9d9d9;
     --footer-font-size-p: 1.3em;
     --footer-font-size-h2: 2em;
+    --secondary-color: #F39200;
 }
 
 footer {
@@ -36,4 +37,12 @@ footer section:nth-child(2) {
 
 .icons img {
     width: 36px;
+}
+
+footer p a {
+    transition: 500ms ease;
+}
+
+footer p a:hover {
+    color: var(--secondary-color);
 }
