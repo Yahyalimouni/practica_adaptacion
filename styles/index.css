@@ -1,5 +1,5 @@
 :root {
-    --h1-font-size: 4em;
+    --h1-font-size: 2.5em;
     --secondary-color: #F39200;
     --button-font-size: 2em;
 }
@@ -9,22 +9,28 @@
     min-height: 100vh;
 }
 
-h1 {
+.index h1 {
     font-size: var(--h1-font-size);
 }
 
 .index {
-    margin-block: 2em;
+    margin-bottom: 2em;
 }
 
 .index section {
     display: flex;
-    min-height: 90vh;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: baseline;
+    padding-bottom: 2em;
 }
+
+.index section:first-child{
+    min-height: 70vh;
+} 
 
 .index section div img {
     width: 50vw;
-    height: 70vh;
 }
 
 .border-radius-right {
@@ -43,49 +49,13 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: baseline;
+    justify-content: center;
     gap: 1em;
     padding-inline: 5em;
     text-align: left;
 }
 
 .index button {
-    font-size: var(--button-font-size);
-    width: 50%;
+    width: 30%;
     padding: 10px;
-    text-align: center;
-    border-radius: 20px;
-}
-
-.secondary-color-bg {
-    color: #eee;
-    margin-top: 1em;
-    background-color: var(--secondary-color);
-    outline: 1px solid transparent;
-    border: none;
-}
-
-.secondary-color-bg:hover {
-    color: var(--secondary-color);
-    background-color: white;
-    outline: 1px solid var(--secondary-color);
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-button {
-    transition: 200ms ease-in-out;
-    font-weight: 600;
-}
-.secondary-color-border {
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    background-color: white;
-}
-
-.secondary-color-border:hover {
-    color: #eee;
-    background-color: var(--secondary-color);
-    border: none;
 }

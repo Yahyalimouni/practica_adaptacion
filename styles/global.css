@@ -1,3 +1,8 @@
+:root {
+    --secondary-color: #f59300;
+    --third-color: #CB700D;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -20,4 +25,28 @@ ul {
 a {
     text-decoration: none;
     color: #000;
+}
+
+button {
+    border-radius: 0.5em;
+    transition: 300ms ease-in-out;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button,
+.secondary-button:hover {
+    outline: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: #eee;
+    border: none;
+}
+
+.primary-button:hover,
+.secondary-button {
+    background-color: transparent;
+    outline: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border: none;
 }

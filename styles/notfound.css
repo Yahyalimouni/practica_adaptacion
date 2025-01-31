@@ -9,10 +9,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
     align-items: center;
 }
-
 
 .notfound h1 {
     font-size: 10em;
@@ -28,12 +27,15 @@
 }
 
 .notfound button {
-    padding: 1em 3em;
-    border-radius: 0.5em;
     color: #eee;
     background-color: var(--secondary-color);
-    cursor: pointer;
     border: none;
+    cursor: pointer;
+    padding: 1em 3em;
+    border-radius: 0.5em;
+    transition: 200ms ease-in-out;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .notfound button:hover {

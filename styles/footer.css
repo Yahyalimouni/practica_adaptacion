@@ -8,7 +8,7 @@
 footer {
     display: flex;
     background-color: var(--footer-bg);
-    height: 40vh;
+    height: 45vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
