@@ -1,15 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-family: 'Source sans 3', sans-serif;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+:root {
+    --header-font-size: 1.3em;
+    --secondary-color: #F39200;
 }
 
 header, nav>ul, header>div {
@@ -17,12 +8,13 @@ header, nav>ul, header>div {
 }
 
 header {
+    padding: 1em 10em;
     background-color: #eee;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-block: 10px;
     width: 100%;
     font-weight: 600;
+    font-size: var(--header-font-size);
 }
 
 header ul {
@@ -37,8 +29,8 @@ header ul li a {
     color: black;
 }
 
-ul li a > img {
-    margin-right: 45px;
+ul a>img {
+    margin-right: 5em;
 }
 
 header div form {
@@ -54,6 +46,24 @@ header div form > input {
     padding: 5px;
 }
 
+header div form>input:focus {
+    outline: none;
+    background-color: #c0b9b9;
+}
+
+header div form>input:focus + button img {
+    transform: rotate3d(0, 1, 0, calc(360deg*2));
+    transition: transform 2s ease;
+}
+
+header button img {
+    transition: transform 0s ease;
+}
+
+header div form>input:hover {
+    background-color: #c0b9b9;
+}
+
 header div form button {
     border: none;
     padding-inline: 5px;
@@ -61,4 +71,30 @@ header div form button {
 
 header div form button img {
     width: 25px;
+}
+
+.carrito {
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.carrito:hover {
+    transform: rotate3d(0, 1, 0, calc(360deg));
+}
+
+header ul a {
+    transition: 0.5s ease;
+    border-bottom: 0.2em solid transparent;
+}
+
+header ul a:hover {
+    border-bottom: 0.2em solid var(--secondary-color);
+}
+
+header nav ul>a:hover {
+    border-bottom: none;
+}
+
+header nav ul>a {
+    border-bottom: none;
 }

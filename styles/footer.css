@@ -1,0 +1,39 @@
+:root {
+    --footer-bg: #d9d9d9;
+    --footer-font-size-p: 1.3em;
+    --footer-font-size-h2: 2em;
+}
+
+footer {
+    display: flex;
+    background-color: var(--footer-bg);
+    height: 50vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 10em;
+    font-weight: 600;
+}
+
+p {
+    font-size: var(--footer-font-size-p);
+}
+
+h2 {
+    font-size: var(--footer-font-size-h2);
+}
+
+footer section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section:nth-child(2) {
+    justify-content: center;
+}
+
+.icons img {
+    width: 36px;
+}
