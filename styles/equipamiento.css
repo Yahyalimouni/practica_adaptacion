@@ -1,0 +1,168 @@
+:root {
+    --secondary-color: hsl(36, 100%, 48%);
+    --third-color: #CB700D;
+    --article-bg-color-hover: #f8f8f8af;
+    --article-bg-color: #f8f8f8;
+    --h2-font-size: 30px;
+    --padding-inline: 10em;
+}
+
+.equipamiento {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.equipamiento h1 {
+    width: 72.5%;
+    margin: 0 auto;
+    padding-block: 1em;
+}
+
+.grid-container {
+    width:80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.grid-container section:nth-child(2){
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.equipamiento article img {
+    width: 400px;
+    border-radius: 20px;
+}
+
+.equipamiento article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--article-bg-color);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    box-shadow: 0px 0px 30px #00000023;
+}
+
+.equipamiento article:hover {
+    background-color: var(--article-bg-color-hover);
+    box-shadow: 0.1px 0.1px 20px #0000007b;
+}
+
+.next-buttons {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.next-buttons button {
+    margin-inline: 2px;
+    background-color: transparent;
+    border: 1px solid var(--third-color);
+    color: var(--third-color);
+    padding: 10px;
+    border-radius: .5em;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.next-buttons button:hover {
+    background-color: var(--third-color);
+    color: #eee;
+}
+
+.filtros {
+    background-color: var(--article-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.filtros h2 {
+    text-align: center;
+    font-size: var(--h2-font-size);
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.categorias {
+    width: 50%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 6fr;
+    margin-bottom: 20px;
+}
+
+.categorias input {
+    cursor: pointer;
+    width: 15px;
+    align-self: center;
+    justify-self: start;
+    height: 15px;
+}
+
+.categorias .radio-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 0;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.categorias input[type="radio"]:checked + .radio-label {
+    color: var(--third-color);
+}
+
+.text-inputs select {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid var(--third-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.equipamiento form button, 
+.equipamiento article .data-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: #eee;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.equipamiento form button:hover,
+.equipamiento article .data-container button:hover {
+    background-color: var(--third-color);
+}
+
+.equipamiento article .description {
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px;
+}
+
+.equipamiento article .description h5 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.equipamiento article .description h6 {
+    font-size: 30px;
+}

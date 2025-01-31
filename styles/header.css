@@ -1,6 +1,7 @@
 :root {
     --header-font-size: 1.3em;
     --secondary-color: #F39200;
+    --padding-inline: 10em;
 }
 
 header, nav>ul, header>div {
@@ -8,7 +9,7 @@ header, nav>ul, header>div {
 }
 
 header {
-    padding: 1em 10em;
+    padding: 1em var(--padding-inline);
     background-color: #eee;
     justify-content: space-between;
     align-items: center;

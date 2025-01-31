@@ -8,14 +8,21 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/logo.png" type="">
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+      </style>
+      <link rel="stylesheet" href="./styles/footer.css">
+      <link rel="stylesheet" href="./styles/header.css">
+      <link rel="stylesheet" href="./styles/global.css">
+      <link rel="stylesheet" href="./styles/equipamiento.css">
       <title>Equipamiento</title>
    </head>
    <body>
       <!-- Start header -->
       <header>
-         <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
          <nav>
             <ul >
+               <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
                <li >
                   <a href="index.html">Home</a>
                </li>
@@ -35,74 +42,154 @@
          </nav>
          <div>
             <form>
-               <input type="text" name="search" id="search" placeholder="search">
+               <input type="text" name="search" id="search" placeholder="Búsqueda">
                <button type="submit">
                   <img src="./images/search_.png" alt="search.png" width="16">
                </button>
             </form>
-            <img src="images/carrito.png" alt="carrito.png" width="24">
+            <img src="images/carrito.png" class="carrito" alt="carrito.png" width="24">
          </div>
       </header>
       <!-- End header -->
       <!-- Start main -->
-      <main>
-         <section>
-            <div>
-               <h3>Productos</h3>
-            </div>
-         </section>
-         <section>
-            <h2>Our products</h2>
-            <article>
-               <img src="images/alforjas.png" alt="">
-                  <h5>Alforjas</h5>
-                  <h6>119'95€</h6>
-            </article>
-            <article>
-               <img src="images/tienda_campaña.png" alt="">
-                  <h5>Tienda de campaña</h5>
-                  <h6>149'99€</h6>
-            </article>
-            <article>
-               <img src="images/saco_dormir.png" alt="">
-                  <h5>Saco de dormir</h5>
-                  <h6>49'50€</h6>
-            </article>
-            <article>
-               <img src="images/panel_solar.png" alt="">
-                  <h5>Panel solar</h5>
-                  <h6>69'99€</h6>
-            </article>
-            <article>
-               <img src="images/casco_proteccion.png" alt="">
-                  <h5>Casco de protección</h5>
-                  <h6>49'99€</h6>
-            </article>
-            <article>
-               <img src="images/gafas.png" alt="">
-                  <h5>Gafas</h5>
-                  <h6>19'95€</h6>
-            </article>
-            <article>
-               <img src="images/pantalones.png" alt="">
-                  <h5>Pantalones</h5>
-                  <h6>49'95€</h6>
-            </article>
-            <article>
-               <img src="images/luces.png" alt="">
-                  <h5>Pack de luces</h5>
-                  <h6>9'99€</h6>
-            </article>
+      <main class="equipamiento">
+         <h1>EQUIPAMIENTO</h1>
+         <div class="grid-container">
 
-            <div>
-               <button>1</button>
-               <button>2</button>
-               <button>3</button>
-               <button>...</button>
-               <button>x-1</button>
-               <button>x</button>
-            </div>
-         </section>
+            <section>
+               <form action="" class="filtros">
+                  <h2>Filtros</h2>
+                  <div class="categorias">
+                     <input type="radio" name="categoria" id="" value="hombres"><span class="radio-label">Hombres</span>
+                     <input type="radio" name="categoria" id="" value="mujeres"><span class="radio-label">Mujeres</span>
+                     <input type="radio" name="categoria" id="" value="ninos"><span class="radio-label">Niños</span>
+                  </div>
+                  <div class="text-inputs">
+                     <select name="colores" id="" class="colores">
+                        <option value="" selected>Todos</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="amarillo">Amarillo</option>
+                        <option value="verde">Verde</option>
+                        <option value="negro">Negro</option>
+                        <option value="blanco">Blanco</option>
+                     </select>
+                     <select name="precio" id="" class="precio">
+                        <option value="" selected>Todos</option>
+                        <option value="bajo">10€ - 50€</option>
+                        <option value="medio">51€ - 150€</option>
+                        <option value="alto">150€ - 9999€</option>
+                     </select>
+                     <select name="tipos" id="" class="tipos">
+                        <option value="" selected>Todos</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="bici">Bicicleta</option>
+                        <option value="cicloviaje">Cicloviaje</option>
+                     </select>
+                  </div>
+                  <button>Buscar</button>
+               </form>
+            </section>
+            <section>
+               <article>
+                  <img src="images/alforjas.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Alforjas</h5>
+                        <h6>119'95€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article>
+               
+               <article>
+                  <img src="images/tienda_campaña.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Tienda de campaña</h5>
+                        <h6>149'99€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article>
+               
+               <article>
+                  <img src="images/saco_dormir.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Saco de dormir</h5>
+                        <h6>49'50€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article>
+               
+               <article>
+                  <img src="images/panel_solar.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Panel solar</h5>
+                        <h6>69'99€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article>
+               
+               <!-- <article>
+                  <img src="images/casco_proteccion.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Casco de protección</h5>
+                        <h6>49'99€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article> -->
+               
+               <article>
+                  <img src="images/gafas.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Gafas</h5>
+                        <h6>19'95€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article>
+               
+               <article>
+                  <img src="images/pantalones.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Pantalones</h5>
+                        <h6>49'95€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article>
+               
+               <article>
+                  <img src="images/luces.png" alt="">
+                  <div class="data-container">
+                     <div class="description">
+                        <h5>Pack de luces</h5>
+                        <h6>9'99€</h6>
+                     </div>
+                     <button class="add-to-cart">Añadir al carrito</button>
+                  </div>
+               </article>
+               
+               
+   
+               <div class="next-buttons">
+                  <button>1</button>
+                  <button>2</button>
+                  <button>3</button>
+                  <button>...</button>
+                  <button>x-1</button>
+                  <button>x</button>
+               </div>
+            </section>
+         </div>
       </main>
       <!-- End main -->
       <!-- Start footer -->
@@ -115,8 +202,9 @@
             </div>
             <div>
                <h2>COMPRAR</h2>
-               <p><a href="equipment.html">Sobre Nosotros</a></p>
-               <p><a href="equipment.html">Contacto</a></p>
+               <p><a href="equipment.html">Equipamiento</a></p>
+               <p><a href="equipment.html">Adultos</a></p>
+               <p><a href="equipment.html">Niños</a></p>
             </div>
          </section>
          <section>
@@ -124,9 +212,9 @@
          </section>
          <section>
             <div class="icons">
-               <img src="./images/fb-icon.png" width="24" alt="fb-icon.png">
-               <img src="./images/insta-icon.png" width="24" alt="insta-icon.png">
-               <img src="./images/twitter-icon.png" width="24" alt="twitter-icon.png">
+               <img src="./images/fb-icon.png" alt="fb-icon.png">
+               <img src="./images/insta-icon.png" alt="insta-icon.png">
+               <img src="./images/twitter-icon.png" alt="twitter-icon.png">
             </div>
             <div>
                <p>&copy; 2024 Benali. Todos los derechos están reservados</p>
