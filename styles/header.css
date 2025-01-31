@@ -6,6 +6,7 @@
 
 header, nav>ul, header>div {
     display: flex;
+    align-items: center;
 }
 
 header {
@@ -55,10 +56,6 @@ header div form>input:focus {
 header div form>input:focus + button img {
     transform: rotate3d(0, 1, 0, calc(360deg*2));
     transition: transform 2s ease;
-}
-
-header button img {
-    transition: transform 0s ease;
 }
 
 header div form>input:hover {

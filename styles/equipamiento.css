@@ -125,20 +125,13 @@
 .equipamiento form button, 
 .equipamiento article .data-container button {
     width: 100%;
-    padding: 12px;
-    background-color: var(--secondary-color);
     color: #eee;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-weight: bold;
 }
 
 .equipamiento form button:hover,
 .equipamiento article .data-container button:hover {
     background-color: var(--third-color);
+    color: #ddd;
 }
 
 .equipamiento article .description {

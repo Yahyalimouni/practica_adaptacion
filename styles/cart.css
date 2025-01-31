@@ -95,31 +95,5 @@ h1 {
 
 .carrito-container form a,
 .carrito-container form button {
-    background-color: transparent;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-    text-align: center;
     width: 20%;
-    padding-block: 1em;
-    border-radius: 5px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-weight: bold;
-}
-
-.carrito-container form a:hover {
-    background-color: var(--secondary-color);
-    color: #eee;
-}
-
-.carrito-container form button {
-    background-color: var(--secondary-color);
-    color: #eee;
-}
-
-.carrito-container form button:hover {
-    border: 2px solid var(--secondary-color);
-    background-color: transparent;
-    color: var(--secondary-color);
 }
