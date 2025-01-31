@@ -62,19 +62,8 @@
 }
 
 .next-buttons button {
-    margin-inline: 2px;
-    background-color: transparent;
-    border: 1px solid var(--third-color);
-    color: var(--third-color);
+    margin-inline: 4px;
     padding: 10px;
-    border-radius: .5em;
-    cursor: pointer;
-    transition: 200ms ease-in-out;
-}
-
-.next-buttons button:hover {
-    background-color: var(--third-color);
-    color: #eee;
 }
 
 .filtros {
