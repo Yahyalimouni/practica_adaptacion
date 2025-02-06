@@ -8,6 +8,12 @@
       <meta name="description" content="" />
       <meta name="author" content="" />
       <link rel="shortcut icon" href="images/logo.png" type="">
+      <link rel="stylesheet" href="./styles/header.css">
+      <link rel="stylesheet" href="./styles/footer.css">
+      <link rel="stylesheet" href="./styles/global.css">
+      <link rel="stylesheet" href="./styles/contacto.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
       <style>
          @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
       </style>
@@ -15,9 +21,9 @@
    </head>
    <body>
       <header>
-         <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
          <nav>
             <ul >
+               <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
                <li >
                   <a href="index.html">Home</a>
                </li>
@@ -37,30 +43,52 @@
          </nav>
          <div>
             <form>
-               <input type="text" name="search" id="search" placeholder="search">
+               <input type="text" name="search" id="search" placeholder="Búsqueda">
                <button type="submit">
                   <img src="./images/search_.png" alt="search.png" width="16">
                </button>
             </form>
-            <img src="images/carrito.png" alt="carrito.png" width="24">
+            <img src="images/carrito.png" class="carrito" alt="carrito.png" width="24">
          </div>
       </header>
       <!-- End header -->
       <!-- Start main -->
-      <main>
-         <section class="inner_page_head">
-            <h3>Contacta con nosotros</h3>
-         </section>
+      <main class="contacto">
+         <h1>CONTACTO</h1>
          <section class="why_section layout_padding">
             <div>
                <form action="index.html">
                   <fieldset>
-                     <input type="text" placeholder="Nombre completo" name="name" required /><br>
-                     <input type="number" placeholder="Número de teléfono" name="phone" required /><br>
-                     <input type="email" placeholder="email" name="email" required /><br>
-                     <input type="text" placeholder="Enter subject" name="subject" required /><br>
-                     <textarea placeholder="Enter your message" required></textarea><br>
-                     <input type="submit" value="Submit" /><br>
+                     <div class="row">
+                        <input class="regular-input" type="text" placeholder="Tu nombre completo ..." name="name" id="name" required/>
+                        <label for="name">Nombre</label>
+                     </div>
+                     
+                     <div class="row">
+                        <input class="regular-input" type="number" placeholder="ex: 111 222 333" name="phone" required/>
+                        <label for="name">Número del teléfono</label>
+                     </div>
+                     
+                     <div class="row">
+                        <input class="regular-input" type="email" placeholder="example@gmail.com" name="email" required/>
+                        <label for="email">Correo electrónico</label>
+                     </div>
+                     
+                     <div class="row">
+                        <textarea placeholder="Entra tu mensaje..." required></textarea>
+                        <label for="Sugerencia">Sugerencia</label>
+                     </div>
+
+                     <div class="subir-row">
+                        <div class="subir">
+                           <label for="archivo"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 24 24" width="30px" fill="#e8eaed"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg> Sube un archivo</label>
+                           <input type="file" name="archivo" id="archivo">
+                        </div>
+                        <p>(Opcional)</p>
+                     </div>
+
+                     <button class="primary-button">Enviar</button>
                   </fieldset>
                </form>
             </div>

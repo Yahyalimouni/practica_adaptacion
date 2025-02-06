@@ -1,12 +1,18 @@
 :root {
     --secondary-color: #f59300;
     --third-color: #CB700D;
+    --form-label-color: #663806;
+    --form-data-color: #a95d0b;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
 }
 
 body {
