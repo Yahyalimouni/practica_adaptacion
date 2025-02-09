@@ -16,26 +16,33 @@
    <body>
       <!-- Start header -->
       <header>
-         <nav>
-            <ul >
-               <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
-               <li >
-                  <a href="index.html">Home</a>
-               </li>
-               <li>
-                  <a href="equipment.html">Adultos</a>
-               </li>
-               <li>
-                  <a href="equipment.html">Niños</a>
-               </li>
-               <li>
-                  <a href="about.html">Sobre Nosotros</a>
-               </li>
-               <li>
-                  <a href="contact.html">Contacto</a>
-               </li>
-            </ul>
-         </nav>
+         <div class="menu">
+            <input type="checkbox" name="" class="" id="menu-checkbox">
+            <label for="menu-checkbox">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+            <nav>
+               <ul class="toggle-on toggle-off">
+                  <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
+                  <li>
+                     <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="equipment.html">Adultos</a>
+                  </li>
+                  <li>
+                     <a href="equipment.html">Niños</a>
+                  </li>
+                  <li>
+                     <a href="about.html">Conócenos</a>
+                  </li>
+                  <li>
+                     <a href="contact.html">Contacto</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
          <div>
             <form>
                <input type="text" name="search" id="search" placeholder="Búsqueda">

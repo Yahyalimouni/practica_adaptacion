@@ -5,16 +5,33 @@
     --header-height: 10vh;
 }
 
+header {
+    height: 10vh !important;
+}
+
 header, nav>ul, header>div {
     display: flex;
     align-items: center;
 }
 
-header .menu #menu-checkbox {
-    /* display: none; */
+label svg {
+    cursor: pointer;
+}
+
+header ul a {
+    cursor: auto;
+}
+
+header ul li,
+header ul li a {
+    cursor: pointer;
 }
 
 header {
+    position: fixed !important;
+    z-index: 50;
+    top: 0px;
+    left: 0;
     padding: 1em var(--padding-inline);
     background-color: #eee;
     justify-content: space-between;
@@ -23,6 +40,7 @@ header {
     width: 100%;
     font-weight: 600;
     font-size: var(--header-font-size);
+    box-shadow: 0 5px 40px #000;
 }
 
 header ul {
@@ -52,6 +70,7 @@ header div form > input {
     border: none;
     background-color: #D9D9D9;
     padding: 0.4em;
+    border-radius: .5em;
 }
 
 header div form>input:focus {
@@ -103,7 +122,7 @@ header nav ul>a {
     border-bottom: none;
 }
 
-@media (max-width: 601px) {
+@media (max-width: 767px) {
     :root {
         --padding-inline: 1em;
         --menu-width: 4em;
@@ -161,12 +180,12 @@ header nav ul>a {
         gap: .1em;
         width: 98%;
         box-shadow: 2px 2px 20px #000;
-        background-color: #333;
+        background-color: #a35311;
         left: 50%;
         translate: -50% 0;
         top:.8em;
         border-radius: .2em;
-        padding: 0.5em;
+        padding: 0.5em 0.1em 0.2em;
         font-size: 3em;
         z-index: 80;
     }
@@ -197,6 +216,34 @@ header nav ul>a {
 
     header {
         position: relative;
-        padding: 1em var(--padding-inline);
+        padding: 1em var(--padding-inline) !important;
+    }
+}
+
+@media (min-width:767px) and (max-width: 1024px) {
+    
+    header {
+        padding: 1em;
+        background-color: #eee;
+        justify-content: space-between;
+        font-size: .95em;
+        box-shadow: 0 5px 40px #000;
+    }
+
+    header ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header ul li a {
+        margin: 0 .5em;
+        text-decoration: none;
+        color: black;
+    }
+
+    ul a>img {
+        margin-right: 0;
     }
 }

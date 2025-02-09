@@ -10,12 +10,13 @@
 
 .tarjeta {
     width: 100%;
-    min-height: 100vh;
+    min-height: 70vh;
+    margin-top: 8em;
 }
 
 .tarjeta h1 {
     text-align: center;
-    padding-block: 1.5em;
+    padding-block: 1em;
 }
 
 .tarjeta form {
@@ -24,7 +25,8 @@
     margin: 0 auto;
     padding: 2em;
     width: 50%;
-    max-width: 500px;
+    max-width: 600px;
+    min-width: 400px;
     background-color: var(--article-bg-color);
     border-radius: 1em;
     box-shadow: 0px 0px 30px #00000023;
@@ -141,4 +143,18 @@
 
 .tarjeta .buttons-group button:nth-child(2):hover {
     color: var(--form-data-color);
+}
+
+@media (min-width:767px) and (max-width: 1024px) {   
+    .tarjeta {
+        width: 100%;
+        min-height: 80vh;
+        margin-top: 6em;
+        font-size: 18px;
+    }
+
+    .tarjeta h1 {
+        text-align: center;
+        padding-block: 1em;
+    }
 }

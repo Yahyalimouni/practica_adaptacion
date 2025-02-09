@@ -4,37 +4,45 @@
     --article-bg-color-hover: #f8f8f8af;
     --article-bg-color: #f8f8f8;
     --h2-font-size: 2em;
-    --padding-inline: 10em;
+    --title-color: #663806;
 }
 
 .equipamiento {
     width: 100%;
-    min-height: 100vh;
 }
 
 .equipamiento h1 {
     width: 72.5%;
     margin: 0 auto;
     padding-block: 1em;
+    color: var(--title-color);
 }
 
 .grid-container {
-    width:80%;
-    margin: 0 auto;
+    --child-padding: 2em;
+    width: 100%;
+    margin: 0 auto !important;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 5fr;;
+    background-color: #CB700D;
+    padding-top: 1em;
 }
 
 .grid-container section:nth-child(2){
     display: flex;
-    gap: 2em;
+    gap: 1em;
+    padding: var(--child-padding) 0.1em;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
+.grid-container section:nth-child(1) {
+    padding: var(--child-padding);
+}
+
 .equipamiento article img {
-    width: 400px;
-    border-radius: 20px;
+    width: 300px;
+    border-radius: 1em;
 }
 
 .equipamiento article {
@@ -45,12 +53,14 @@
     background-color: var(--article-bg-color);
     cursor: pointer;
     transition: 200ms ease-in-out;
-    box-shadow: 0px 0px 30px #00000023;
+    box-shadow: 1px 1px 1.5em #00000023;
+    border-radius: 1em;
+    transition: 500ms ease;
 }
 
 .equipamiento article:hover {
-    background-color: var(--article-bg-color-hover);
     box-shadow: 0.1px 0.1px 20px #0000007b;
+    scale: 1.02;
 }
 
 .next-buttons {
@@ -62,54 +72,59 @@
 }
 
 .next-buttons button {
-    margin-inline: 4px;
-    padding: 10px;
+    margin-inline: .4em;
+    padding: .5em;
 }
 
 .filtros {
     background-color: var(--article-bg-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
+    border-radius: .6em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 1em;
     font-family: 'Arial', sans-serif;
 }
 
 .filtros h2 {
     text-align: center;
     font-size: var(--h2-font-size);
-    margin-bottom: 20px;
+    margin-bottom: 1em;
     color: #333;
 }
 
 .categorias {
     width: 50%;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 6fr;
-    margin-bottom: 20px;
-}
+    display: flex;
+    align-items: baseline; 
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
 
-.categorias input {
+.categorias > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+  
+  .categorias input {
+    width: 1em; 
+    height: 1em;
     cursor: pointer;
-    width: 15px;
-    align-self: center;
-    justify-self: start;
-    height: 15px;
-}
-
-.categorias .radio-label {
-    display: inline-block;
+    margin-right: 1em;
+  }
+  
+  .categorias .radio-label {
     cursor: pointer;
-    padding: 8px 0;
-    border-radius: 15px;
-    font-size: 16px;
-}
-
-.categorias input[type="radio"]:checked + .radio-label {
+    font-size: 1em;
+  }
+  
+  .categorias input[type="radio"]:checked + .radio-label {
     color: var(--third-color);
-}
+  }
+  
 
 .text-inputs select {
     cursor: pointer;
@@ -147,4 +162,55 @@
 
 .equipamiento article .description h6 {
     font-size: 30px;
+} 
+
+@media (max-width: 767px){
+    .equipamiento {
+        width: 100%;
+        min-height: 100vh;
+        margin-block: 10vh 0;
+    }
+
+    .equipamiento h1 {
+        padding-block: 2em;
+        color: var(--title-color);
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0.5em;
+        padding-bottom: 0;
+    }
+
+    .equipamiento article img {
+        width: 250px;
+    }
+
+    .equipamiento article {
+        border-radius: 1em;
+    }   
+
+    .filtros {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .equipamiento h1 {
+        padding-block: 1em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .equipamiento article img {
+        width: 215px;
+    }
+
+    .next-buttons {
+        padding-block: 1.5em 0;
+    }
 }

@@ -13,9 +13,6 @@
     font-size: var(--h1-font-size);
 }
 
-.index {
-    margin-bottom: 2em;
-}
 
 .index section {
     display: flex;
@@ -111,11 +108,7 @@
 }
 
 
-@media (max-width: 601px) {
-    html {
-        font-size: 10px;
-    }
-        
+@media (max-width: 767px) {
     .index {
         width: 100%;
     }
@@ -144,6 +137,16 @@
 
     .index section div {
         width: 100%;
+        padding-inline: 2em;
+    }
+
+    .index section div h1 {
+        text-align: center;
+    }
+
+    .index section div button {
+        font-size: 1.5em;
+        padding-block: 1em;
     }
 
     section:has(:nth-child(2) img) {

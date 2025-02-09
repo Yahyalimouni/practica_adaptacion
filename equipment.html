@@ -20,26 +20,33 @@
    <body>
       <!-- Start header -->
       <header>
-         <nav>
-            <ul >
-               <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
-               <li >
-                  <a href="index.html">Home</a>
-               </li>
-               <li>
-                  <a href="equipment.html">Adultos</a>
-               </li>
-               <li>
-                  <a href="equipment.html">Niños</a>
-               </li>
-               <li>
-                  <a href="about.html">Sobre Nosotros</a>
-               </li>
-               <li>
-                  <a href="contact.html">Contacto</a>
-               </li>
-            </ul>
-         </nav>
+         <div class="menu">
+            <input type="checkbox" name="" class="" id="menu-checkbox">
+            <label for="menu-checkbox">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+            <nav>
+               <ul class="toggle-on toggle-off">
+                  <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
+                  <li>
+                     <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="equipment.html">Adultos</a>
+                  </li>
+                  <li>
+                     <a href="equipment.html">Niños</a>
+                  </li>
+                  <li>
+                     <a href="about.html">Conócenos</a>
+                  </li>
+                  <li>
+                     <a href="contact.html">Contacto</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
          <div>
             <form>
                <input type="text" name="search" id="search" placeholder="Búsqueda">
@@ -55,14 +62,19 @@
       <main class="equipamiento">
          <h1>Equipamiento</h1>
          <div class="grid-container">
-
             <section>
                <form action="" class="filtros">
                   <h2>Filtros</h2>
                   <div class="categorias">
-                     <input type="radio" name="categoria" id="" value="hombres"><span class="radio-label">Hombres</span>
-                     <input type="radio" name="categoria" id="" value="mujeres"><span class="radio-label">Mujeres</span>
-                     <input type="radio" name="categoria" id="" value="ninos"><span class="radio-label">Niños</span>
+                     <div>
+                        <input type="radio" name="categoria" id="" value="hombres"><span class="radio-label">hombres</span>
+                     </div>
+                     <div>
+                        <input type="radio" name="categoria" id="" value="mujeres"><span class="radio-label">mujeres</span>
+                     </div>
+                     <div>
+                        <input type="radio" name="categoria" id="" value="ninos"><span class="radio-label">niños</span>
+                     </div>
                   </div>
                   <div class="text-inputs">
                      <select name="colores" id="" class="colores">
@@ -134,16 +146,16 @@
                   </div>
                </article>
                
-               <!-- <article>
+               <article>
                   <img src="images/casco_proteccion.png" alt="">
                   <div class="data-container">
                      <div class="description">
                         <h5>Casco de protección</h5>
                         <h6>49'99€</h6>
                      </div>
-                     <button class="">Añadir al carrito</button>
+                     <button class="primary-button">Añadir al carrito</button>
                   </div>
-               </article> -->
+               </article>
                
                <article>
                   <img src="images/gafas.png" alt="">
@@ -177,16 +189,14 @@
                      <button class=" primary-button">Añadir al carrito</button>
                   </div>
                </article>
-               
-               
    
                <div class="next-buttons">
-                  <button class="third-button">1</button>
-                  <button class="third-button">2</button>
-                  <button class="third-button">3</button>
-                  <button class="third-button">...</button>
-                  <button class="third-button">x-1</button>
-                  <button class="third-button">x</button>
+                  <button class="primary-button">1</button>
+                  <button class="primary-button">2</button>
+                  <button class="primary-button">3</button>
+                  <button class="primary-button">...</button>
+                  <button class="primary-button">x-1</button>
+                  <button class="primary-button">x</button>
                </div>
             </section>
          </div>

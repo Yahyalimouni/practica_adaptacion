@@ -24,6 +24,9 @@ body {
     align-items: center;
 }
 
+main {
+    margin: 5em 0 0;
+}
 
 header .menu label,
 header .menu input {
@@ -45,10 +48,10 @@ button,
 .third-button {
     border-radius: 0.5em;
     transition: 300ms ease-in-out;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     cursor: pointer;
-    padding-block: 1em;
+    padding-block: 0.6em;
     text-align: center;
 }
 
@@ -77,4 +80,16 @@ button,
 .third-button:hover {
     background-color: var(--third-color);
     color: #eee;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:767px) and (max-width: 1024px){
+    html {
+        font-size: 20px;
+    }
 }

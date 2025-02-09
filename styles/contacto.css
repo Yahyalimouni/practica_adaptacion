@@ -191,3 +191,41 @@
     color: #d9d9d9;
     outline: none;
 }
+
+@media (max-width: 767px) {
+        
+    .contacto {
+        margin-block: 10vh 0;
+        min-height: 120vh;
+        width: 100%;
+    }
+
+    .contacto h1 {
+        padding-block: 1.5em;
+        font-size: 3em;
+    }
+
+    .contacto form {
+        width: 80%;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width:767px) and (max-width: 1024px) {
+    .contacto {
+        margin-block: 10vh 0;
+        min-height: 120vh;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .contacto h1 {
+        padding-block: .8em;
+        font-size: 3em;
+    }
+
+    .contacto form {
+        width: 80%;
+        font-size: 1.5em;
+    }
+}
