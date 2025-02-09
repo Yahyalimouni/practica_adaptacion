@@ -24,6 +24,12 @@ body {
     align-items: center;
 }
 
+
+header .menu label,
+header .menu input {
+    display: none;
+}
+
 ul {
     list-style-type: none;
 }

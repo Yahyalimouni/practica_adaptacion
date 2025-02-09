@@ -16,26 +16,33 @@
    <body>
       <!-- Start header -->
       <header>
-         <nav>
-            <ul >
-               <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
-               <li >
-                  <a href="index.html">Home</a>
-               </li>
-               <li>
-                  <a href="equipment.html">Adultos</a>
-               </li>
-               <li>
-                  <a href="equipment.html">Niños</a>
-               </li>
-               <li>
-                  <a href="about.html">Sobre Nosotros</a>
-               </li>
-               <li>
-                  <a href="contact.html">Contacto</a>
-               </li>
-            </ul>
-         </nav>
+         <div class="menu">
+            <input type="checkbox" name="" class="" id="menu-checkbox">
+            <label for="menu-checkbox">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+            <nav>
+               <ul class="toggle-on toggle-off">
+                  <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
+                  <li>
+                     <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="equipment.html">Adultos</a>
+                  </li>
+                  <li>
+                     <a href="equipment.html">Niños</a>
+                  </li>
+                  <li>
+                     <a href="about.html">Sobre Nosotros</a>
+                  </li>
+                  <li>
+                     <a href="contact.html">Contacto</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
          <div>
             <form>
                <input type="text" name="search" id="search" placeholder="Búsqueda">
@@ -48,7 +55,7 @@
       </header>
       <!-- End header -->
       <!-- Start main -->
-      <main class="index">
+      <main class="index" id="home">
          <section>
             <div>
                <img src="./images/home01.jpg" class="border-radius-right" width="500" alt="back_view.jpg">
@@ -62,6 +69,9 @@
                <button id="material_bici" class="secondary-button">Material Bicicleta</button>
             </div>
          </section>
+         <div class="wheel-container">
+            <img src="./images/wheel.png" alt="">
+         </div>
          <section>
             <div class="description-buttons">
                <h1>
@@ -74,6 +84,9 @@
                <img class="border-radius-left" src="./images/home02.jpg" width="500" alt="frnt_view.jpg">
             </div>
          </section>
+         <div class="wheel-container">
+            <img src="./images/wheel.png" alt="">
+         </div>
          <section>
             <div>
                <img class="border-radius-right" src="./images/home03.jpg" alt="">
@@ -86,6 +99,9 @@
                <button id="ver_sillas" class="primary-button">Ver Sillas</button>
             </div>
          </section>
+         <div class="wheel-container">
+            <img src="./images/wheel.png" alt="">
+         </div>
          <section>
             <div class="description-buttons">
                <h1>
@@ -95,7 +111,9 @@
                <button id="ver_coleccion" class="primary-button">Ver Colección</button>
             </div>
             <div>
-               <img src="./images/home04.png" class="border-radius-left" alt="">
+               <a href="#home">
+                  <img src="./images/home04.png" class="border-radius-left" alt="">
+               </a>
             </div>
          </section>
       </main>

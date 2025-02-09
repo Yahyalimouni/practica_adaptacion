@@ -15,7 +15,7 @@
 
 .tarjeta h1 {
     text-align: center;
-    padding-block: 2.5em;
+    padding-block: 1.5em;
 }
 
 .tarjeta form {
@@ -128,7 +128,7 @@
     outline: 1px solid var(--form-data-color);
     padding-inline: 2em;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .tarjeta .buttons-group button:first-child {
