@@ -221,12 +221,11 @@ header nav ul>a {
 }
 
 @media (min-width:767px) and (max-width: 1024px) {
-    
     header {
         padding: 1em;
         background-color: #eee;
         justify-content: space-between;
-        font-size: .95em;
+        font-size: 1.2em !important;
         box-shadow: 0 5px 40px #000;
     }
 
@@ -244,6 +243,6 @@ header nav ul>a {
     }
 
     ul a>img {
-        margin-right: 0;
+        margin-right: .5em;
     }
 }

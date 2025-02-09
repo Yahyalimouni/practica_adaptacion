@@ -103,22 +103,21 @@
 
     100% {
         opacity: 1;
-        transform: rotate(360deg);
+        transform: rotate(calc(360deg * 1.2));
     }
 }
 
-
 @media (max-width: 767px) {
+    html {
+        font-size: 10px;
+    }
+
     .index {
-        width: 100%;
+        margin-block: 12em 0em;
     }
 
     .index h1 {
         font-size: var(--h1-font-size);
-    }
-
-    .index {
-        margin-bottom: 2em;
     }
     
     .index section {
@@ -126,18 +125,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0;
+        padding: 0 !important;
         flex-direction: column;
         gap: 2em;
-        text-align: center;
         padding: 1.2em;
         min-height: 70vh;
         padding: 5em 0.2em;
     }
-
-    .index section div {
+    
+    .index section div:has(h1) {
         width: 100%;
-        padding-inline: 2em;
+        padding-inline: 1em !important;
     }
 
     .index section div h1 {
@@ -161,12 +159,55 @@
         width: 100%;
     }
 
-    .border-radius-right {
-        border-radius: 0 10em 10em 0;
+    .index section button {
+        width: 100%;
     }
 
-    .border-radius-left {
-        border-radius: 10em 0 0 10em;
+    .wheel-container {
+        opacity: 1 !important;
+        animation-range: entry 0% cover 100%;
+    }
+}
+
+@media (min-width:767px) and (max-width: 1024px) {
+    .index {
+        margin-block: 4em 2em;
+        font-size: .7em;
+    }
+    
+    .index section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        gap: 2em;
+        padding: 5em 0;
+    }
+
+    .index section div {
+        width: 100%;
+    }
+
+    .index section div h1 {
+        text-align: center;
+    }
+
+    .index section div button {
+        font-size: 1.5em;
+        padding-block: 1em;
+    }
+
+    section:has(:nth-child(2) img) {
+        flex-direction: column-reverse;
+    }
+    
+    .index section:first-child{
+        min-height: 0;
+    } 
+
+    .index section div img {
+        width: 100%;
     }
 
     .index section div:nth-child(1) {
@@ -176,21 +217,9 @@
     .index section button {
         width: 100%;
     }
-        
+
     .wheel-container {
-        width: 100%;
-        height: 20vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: rotate(0);
-        
-        animation: fade-in linear both;
-        animation-timeline: view();
+        opacity: 1 !important;
         animation-range: entry 0% cover 100%;
     }
-
-    .wheel-container img {
-        cursor: pointer;
-}
 }
