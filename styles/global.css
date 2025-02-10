@@ -67,8 +67,8 @@ button,
 .secondary-button,
 .third-button {
     background-color: transparent;
-    outline: 1px solid var(--secondary-color);
-    color: var(--secondary-color);
+    outline: 1px solid var(--form-data-color);
+    color: var(--form-data-color);
     border: none;
 }
 

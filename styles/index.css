@@ -2,6 +2,8 @@
     --h1-font-size: 2.5em;
     --secondary-color: #F39200;
     --button-font-size: 2em;
+    --third-color: #CB700D;
+    --forth-color: #de9a55;
 }
 
 .index {
@@ -12,7 +14,6 @@
 .index h1 {
     font-size: var(--h1-font-size);
 }
-
 
 .index section {
     display: flex;
@@ -28,6 +29,10 @@
 
 .index section div img {
     width: 100%;
+}
+
+.index > section:nth-child(even) {
+    background: radial-gradient(var(--forth-color) 0%, var(--third-color) 60%, var(--third-color) 90%);
 }
 
 .border-radius-right {
