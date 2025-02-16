@@ -49,7 +49,7 @@
 }
 
 .equipamiento article {
-    --image-width: 300px;
+    --image-width: 310px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

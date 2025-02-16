@@ -220,7 +220,7 @@ header nav ul>a {
     }
 }
 
-@media (min-width:767px) and (max-width: 1024px) {
+@media (min-width:767px) and (max-width: 1124px) {
     header {
         padding: 1em;
         background-color: #eee;
