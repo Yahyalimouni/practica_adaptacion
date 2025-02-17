@@ -2,7 +2,7 @@ section:nth-child(1) {
     min-height: 80vh;
     background-color: azure;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 50% 50%;
     gap: 2em;
 }
@@ -20,4 +20,8 @@ section:nth-child(1) {
 .bottom-right {
     grid-row: 2/3;
     grid-column: 2/3;
+}
+
+div > img {
+    width: 100%;
 }
