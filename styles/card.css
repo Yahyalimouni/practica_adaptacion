@@ -1,0 +1,160 @@
+:root {
+    --article-bg-color-hover: #f8f8f8af;
+    --article-bg-color: #f8f8f8;
+    --formas-pago-bg-color: #FFF6E9;
+    --formas-pago-bg-color-hover: #F8CA97;
+    --form-label-color: #663806;
+    --form-data-color: #a95d0b;
+    --place-holder-opacity: 51%;
+}
+
+.tarjeta {
+    width: 100%;
+    min-height: 90vh;
+    margin-top: 5em;
+}
+
+.tarjeta h1 {
+    text-align: center;
+    padding-block: 1em;
+}
+
+.tarjeta form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2em;
+    width: 50%;
+    max-width: 600px;
+    min-width: 400px;
+    background-color: var(--article-bg-color);
+    border-radius: 1em;
+    box-shadow: 0px 0px 30px #00000023;
+    transition: 500ms ease-in-out;
+    gap: 2.5em;
+}
+
+.tarjeta form:hover {
+    box-shadow: 0px 0px 35px #000;
+}
+
+.tarjeta h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.formas-pago {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formas-pago button {
+    min-width: 25%;
+    background-color: var(--formas-pago-bg-color);
+    border: none;
+    height: fit-content;
+}
+
+.formas-pago button:hover {
+    background-color: var(--formas-pago-bg-color-hover);
+}
+
+.tarjeta button img {
+    transition: 0s ease;
+}
+
+.formas-pago button:hover > img {
+    transform: rotate3d(0, 1, 0, 360deg);
+    transition: 1s ease-in-out;
+}
+
+.tarjeta fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    background-color: none;
+    border: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+}
+
+.tarjeta label {
+    display: block;
+    color: var(--form-label-color);
+    font-weight: 600;
+    transition: 200ms ease-in-out;
+}
+
+.tarjeta form input::placeholder {
+    color: var(--form-label-color);
+    opacity: var(--place-holder-opacity);
+}
+
+.tarjeta form input {
+    width: 100%;
+    padding: 0.4em;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--form-label-color);
+    color: var(--form-data-color);
+}
+
+.tarjeta form input:focus {
+    border-bottom: 2px solid var(--form-data-color);
+}
+
+.tarjeta form input:focus + label {
+    color: var(--form-data-color);
+    font-size: 1.1em;
+}
+
+.row {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.tarjeta form input:focus {
+    outline: none;
+}
+
+.tarjeta .buttons-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta .buttons-group button {
+    outline: 1px solid var(--form-data-color);
+    padding-inline: 2em;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.tarjeta .buttons-group button:first-child {
+    color: var(--form-data-color);
+}
+
+.tarjeta .buttons-group button:first-child:hover {
+    color: #eee;
+}
+
+.tarjeta .buttons-group button:nth-child(2):hover {
+    color: var(--form-data-color);
+}
+
+@media (min-width:767px) and (max-width: 1024px) {   
+    .tarjeta {
+        width: 100%;
+        min-height: 80vh;
+        margin-top: 6em;
+        font-size: 18px;
+    }
+
+    .tarjeta h1 {
+        text-align: center;
+        padding-block: 1em;
+    }
+}

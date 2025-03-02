@@ -1,0 +1,248 @@
+:root {
+    --header-font-size: 1em;
+    --secondary-color: #F39200;
+    --padding-inline: 10em;
+    --header-height: 10vh;
+}
+
+header {
+    height: 10vh !important;
+}
+
+header, nav>ul, header>div {
+    display: flex;
+    align-items: center;
+}
+
+label svg {
+    cursor: pointer;
+}
+
+header ul a {
+    cursor: auto;
+}
+
+header ul li,
+header ul li a {
+    cursor: pointer;
+}
+
+header {
+    position: fixed !important;
+    z-index: 50;
+    top: 0px;
+    left: 0;
+    padding: 1em var(--padding-inline);
+    background-color: #eee;
+    justify-content: space-between;
+    height: var(--header-height);
+    align-items: center;
+    width: 100%;
+    font-weight: 600;
+    font-size: var(--header-font-size);
+    box-shadow: 0 5px 40px #000;
+}
+
+header ul {
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+ul a>img {
+    margin-right: 5em;
+}
+
+header div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+}
+
+header div form > input {
+    border: none;
+    background-color: #D9D9D9;
+    padding: 0.4em;
+    border-radius: .5em;
+}
+
+header div form>input:focus {
+    outline: none;
+    background-color: #c0b9b9;
+}
+
+header div form>input:focus + button img {
+    transform: rotate3d(0, 1, 0, calc(360deg*2));
+    transition: transform 2s ease;
+}
+
+header div form>input:hover {
+    background-color: #c0b9b9;
+}
+
+header div form button {
+    border: none;
+    padding-inline: 5px;
+}
+
+header div form button img {
+    width: 25px;
+}
+
+.carrito {
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.carrito:hover {
+    transform: rotate3d(0, 1, 0, calc(360deg));
+}
+
+header ul a {
+    transition: 0.5s ease;
+    border-bottom: 0.2em solid transparent;
+}
+
+header ul a:hover {
+    border-bottom: 0.2em solid var(--secondary-color);
+}
+
+header nav ul>a:hover {
+    border-bottom: none;
+}
+
+header nav ul>a {
+    border-bottom: none;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --padding-inline: 1em;
+        --menu-width: 4em;
+    }
+
+    .menu {
+        padding: 0;
+    }
+
+    header .menu label {
+        display: block !important;
+    }
+
+    header .menu label svg:nth-child(2){
+        display: none;
+    }
+
+    header .menu label {
+        z-index: 99;
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+    }
+
+    #menu-checkbox:checked ~ nav .toggle-on {
+        display: flex !important;
+    }
+
+    #menu-checkbox:checked ~ label svg:first-child{
+        display: none !important;
+    }
+
+    #menu-checkbox:checked ~ label svg:nth-child(2){
+        display: block !important;
+    }
+
+    header:has(#menu-checkbox:checked) + main {
+        filter: blur(5px) ;
+        transition: filter 400ms ease;
+    }
+
+    header .menu svg {
+        fill: #000000;
+        width: var(--menu-width);
+        height: var(--menu-width);
+    }
+
+    .toggle-on {
+        display: none !important;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .1em;
+        width: 98%;
+        box-shadow: 2px 2px 20px #000;
+        background-color: #a35311;
+        left: 50%;
+        translate: -50% 0;
+        top:.8em;
+        border-radius: .2em;
+        padding: 0.5em 0.1em 0.2em;
+        font-size: 3em;
+        z-index: 80;
+    }
+
+    .toggle-on > a {
+        position: relative;
+        padding: 1em;
+        height: 6em;
+        width: 100%;
+    }
+
+    .toggle-on > a img {
+        width: 3em;
+        aspect-ratio: 2/2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    .toggle-on li {
+        padding-block: .2em;
+        background-color: #D9D9D9;
+        width: 100%;
+        text-align: center;
+        border-radius: .2em;
+    }
+
+    header {
+        position: relative;
+        padding: 1em var(--padding-inline) !important;
+    }
+}
+
+@media (min-width:767px) and (max-width: 1124px) {
+    header {
+        padding: 1em;
+        background-color: #eee;
+        justify-content: space-between;
+        font-size: 1.2em !important;
+        box-shadow: 0 5px 40px #000;
+    }
+
+    header ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header ul li a {
+        margin: 0 .5em;
+        text-decoration: none;
+        color: black;
+    }
+
+    ul a>img {
+        margin-right: .5em;
+    }
+}

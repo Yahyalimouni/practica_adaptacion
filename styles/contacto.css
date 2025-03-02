@@ -1,0 +1,233 @@
+:root {
+    --secondary-color: #f59300;
+    --third-color: #CB700D;
+    --form-label-color: #663806;
+    --form-data-color: #a95d0b;
+    --article-bg-color-hover: #f8f8f8af;
+    --article-bg-color: #f8f8f8;
+    --form-border-radius: .6em;
+}
+
+.contacto {
+    position: relative;
+    margin-top: 4.2em;
+    min-height: 115vh;
+    width: 100%;
+    z-index: 0;
+    background: radial-gradient(#d6d4d2 0%, var(--third-color) 60%, var(--third-color) 90%);
+}
+
+.contacto h1 {
+    padding-block: 1em;
+    font-weight: 500;
+    text-align: center;
+    color: var(--form-label-color);
+}
+
+.contacto form {
+    border-radius: var(--form-border-radius);
+    padding: 2em 1em;
+    width: 50%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--article-bg-color);
+}
+
+@keyframes form-glow {
+    0% {
+        background-size: 0% 0%;
+    }
+    50% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 0% 0%;
+    }
+}
+
+.contacto form::after,
+.contacto form::before {
+    --variation: 8px;
+    content: '';
+    position: absolute;
+    width: calc(100% + var(--variation));
+    height: calc(100% + var(--variation));
+    background: linear-gradient(45deg, var(--third-color), var(--form-label-color), var(--secondary-color), var(--form-data-color));
+    background-size: 600% 600%;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: var(--form-border-radius);
+    animation: 3s form-glow linear infinite;
+}
+
+.contacto form::before {
+    filter: blur(1em);
+}
+
+.contacto fieldset {
+    border: none;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.contacto .row {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: .5em;
+}
+
+.contacto .row label {
+    font-weight: 600;
+    color: var(--form-label-color);
+}
+
+.contacto .regular-input {
+    border: none;
+    border-bottom: 2px solid var(--form-label-color);
+    background-color: transparent;
+}
+
+.contacto .regular-input,
+.contacto textarea {
+    padding: .6em .6em;
+    color: var(--form-label-color);
+    font-size: .8em;
+    font-weight: 600;
+}
+
+.contacto textarea {
+    border-radius: .5em;
+    min-height: 150px;
+    border: 2px solid var(--form-label-color);
+}
+
+.contacto textarea:focus {
+    border: 2px solid var(--third-color);
+}
+
+.contacto textarea:focus + label{
+    color: var(--third-color);
+}
+
+.contacto .regular-input::placeholder,
+.contacto textarea::placeholder {
+    color: var(--form-label-color);
+    opacity: 51%;
+}
+
+.contacto .regular-input:focus {
+    border-bottom: 2px solid var(--third-color);
+}
+
+.contacto .regular-input:focus + label {
+    color: var(--form-data-color);
+}
+
+.contacto .regular-input:focus,
+.contacto textarea:focus {
+    outline: none;
+}
+
+.contacto .subir-row {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    line-height: 3;
+    color: #663806;
+}
+
+.contacto .subir-row input {
+    display: none;
+}
+
+.contacto .subir-row .subir {
+    width: fit-content;
+    height: 100%;
+    line-height: 3;
+}
+
+.contacto .subir-row label {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+    outline: 3px dashed var(--form-label-color);
+    color: var(--form-label-color);
+    border-radius: 1em;
+    padding-inline: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 200ms ease;
+}
+
+.contacto .subir-row label:hover,
+.contacto .subir-row label:hover svg {
+    fill: var(--form-data-color);
+    color: var(--form-data-color);
+}
+
+.contacto .subir-row label:hover {
+    outline: 3px dashed var(--form-data-color);
+}
+
+.contacto .subir-row label svg {
+    transition: 200ms ease;
+    fill: var(--form-label-color);
+}
+
+.contact-button {
+    background-color: var(--form-label-color);
+    outline: none;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: .8em 3.5em;
+}
+
+.contact-button:hover {
+    background-color: var(--form-data-color);
+    color: #d9d9d9;
+    outline: none;
+}
+
+@media (max-width: 767px) {
+        
+    .contacto {
+        margin-block: 10vh 0;
+        min-height: 130vh;
+        width: 100%;
+    }
+
+    .contacto h1 {
+        padding-block: 1em;
+        font-size: 3em;
+    }
+
+    .contacto form {
+        width: 80%;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width:767px) and (max-width: 1024px) {
+    .contacto {
+        margin-block: 10vh 0;
+        min-height: 120vh;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .contacto h1 {
+        padding-block: .8em;
+        font-size: 3em;
+    }
+
+    .contacto form {
+        width: 80%;
+        font-size: 1.5em;
+    }
+}

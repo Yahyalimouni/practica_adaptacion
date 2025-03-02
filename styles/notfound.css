@@ -1,0 +1,50 @@
+:root {
+    --secondary-color: hsl(36, 100%, 48%);
+    --third-color: #CB700D;
+}
+
+.notfound {
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.notfound h1 {
+    font-size: 10em;
+}
+
+.notfound h3 {
+    font-size: 3em;
+}
+
+.notfound p {
+    width: 50%;
+    text-align: center;
+}
+
+.notfound button {
+    color: #eee;
+    background-color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    padding: 1em 3em;
+    border-radius: 0.5em;
+    transition: 200ms ease-in-out;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.notfound button:hover {
+    background-color: var(--third-color);
+}
+
+@media (min-width:767px) and (max-width: 1024px) {
+    .notfound p {
+        font-size: 1.2em;
+    }
+}

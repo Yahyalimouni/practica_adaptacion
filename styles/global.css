@@ -1,0 +1,95 @@
+:root {
+    --secondary-color: #f59300;
+    --third-color: #CB700D;
+    --form-label-color: #663806;
+    --form-data-color: #a95d0b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Source sans 3', sans-serif;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    margin: 5em 0 0;
+}
+
+header .menu label,
+header .menu input {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button,
+.primary-button,
+.secondary-button,
+.third-button {
+    border-radius: 0.5em;
+    transition: 300ms ease-in-out;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    padding-block: 0.6em;
+    text-align: center;
+}
+
+.primary-button,
+.secondary-button:hover {
+    outline: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: #eee;
+    border: none;
+}
+
+.primary-button:hover,
+.secondary-button,
+.third-button {
+    background-color: transparent;
+    outline: 1px solid var(--form-data-color);
+    color: var(--form-data-color);
+    border: none;
+}
+
+.third-button {
+    outline: 1px solid var(--third-color);
+    color: var(--third-color);
+}
+
+.third-button:hover {
+    background-color: var(--third-color);
+    color: #eee;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:767px) and (max-width: 1024px){
+    html {
+        font-size: 18px;
+    }
+}
