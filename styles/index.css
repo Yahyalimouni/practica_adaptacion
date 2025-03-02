@@ -31,6 +31,10 @@
     width: 100%;
 }
 
+.index > section:nth-child(even) {
+    background: radial-gradient(var(--forth-color) 0%, var(--third-color) 60%, var(--third-color) 90%);
+}
+
 .border-radius-right {
     border-radius: 0 10em 10em 0;
 }
