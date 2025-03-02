@@ -110,7 +110,7 @@ header ul a {
     border-bottom: 0.2em solid transparent;
 }
 
-header ul a:hover {
+header ul a:not(#logoa):hover {
     border-bottom: 0.2em solid var(--secondary-color);
 }
 

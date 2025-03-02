@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
    <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -24,33 +24,35 @@
             </label>
             <nav>
                <ul class="toggle-on toggle-off">
-                  <a href="index.html"><img width="50" src="images/logo.png" alt="#" /></a>
                   <li>
-                     <a href="index.html">Home</a>
+                     <a href="index.html" aria-label="Ir a la página de inicio" id="logoa"><img width="50" src="images/logo.png" alt="Logo de Benali, ir a la página de inicio" /></a>
                   </li>
                   <li>
-                     <a href="equipment.html">Adultos</a>
+                     <a href="index.html" aria-label="Ir a la página de inicio">Home</a>
                   </li>
                   <li>
-                     <a href="equipment.html">Niños</a>
+                     <a href="equipment.html" aria-label="Ver productos para adultos">Adultos</a>
                   </li>
                   <li>
-                     <a href="about.html">Conócenos</a>
+                     <a href="equipment.html" aria-label="Ver productos para niños">Niños</a>
                   </li>
                   <li>
-                     <a href="contact.html">Contacto</a>
+                     <a href="about.html" aria-label="Conocer más sobre nosotros">Conócenos</a>
+                  </li>
+                  <li>
+                     <a href="contact.html" aria-label="Ir a la página de contacto">Contacto</a>
                   </li>
                </ul>
             </nav>
          </div>
          <div>
             <form>
-               <input type="text" name="search" id="search" placeholder="Búsqueda">
-               <button type="submit">
-                  <img src="./images/search_.png" alt="search.png" width="16">
+               <input type="text" name="search" id="search" placeholder="Búsqueda" aria-label="Buscar productos">
+               <button type="submit" aria-label="Buscar">
+                  <img src="./images/search_.png" alt="Ícono de búsqueda" width="16">
                </button>
             </form>
-            <img src="images/carrito.png" class="carrito" alt="carrito.png" width="24">
+            <img src="images/carrito.png" class="carrito" alt="Ícono de carrito de compras" width="24">
          </div>
       </header>
       <!-- End header -->
@@ -58,19 +60,19 @@
       <main class="index" id="home">
          <section>
             <div>
-               <img src="./images/home01.jpg" class="border-radius-right" width="500" alt="back_view.jpg">
+               <img src="./images/home01.jpg" class="border-radius-right" width="500" alt="Vista trasera de una bicicleta de cicloturismo">
             </div>
             <div class="description-buttons">
                <h1>
                   Prepárate para la aventura: explora nuestros últimos 
                   esenciales para el cicloturismo.
                </h1>
-               <button id="novedades" class="primary-button">Novedades</button>
-               <button id="material_bici" class="secondary-button">Material Bicicleta</button>
+               <button id="novedades" class="primary-button" aria-label="Ver novedades">Novedades</button>
+               <button id="material_bici" class="secondary-button" aria-label="Ver material para bicicleta">Material Bicicleta</button>
             </div>
          </section>
          <div class="wheel-container">
-            <img src="./images/wheel.png" alt="">
+            <img src="./images/wheel.png" alt="Rueda de bicicleta decorativa">
          </div>
          <section>
             <div class="description-buttons">
@@ -78,29 +80,29 @@
                   Las mejores vistas están al final del camino más
                   desafiante. ¡Pedalea hacia ellas!
                </h1>
-               <button id="material_montania" class="primary-button">Material Montaña</button>
+               <button id="material_montania" class="primary-button" aria-label="Ver material para montaña">Material Montaña</button>
             </div>
             <div>
-               <img class="border-radius-left" src="./images/home02.jpg" width="500" alt="frnt_view.jpg">
+               <img class="border-radius-left" src="./images/home02.jpg" width="500" alt="Vista frontal de cicloturista en montaña">
             </div>
          </section>
          <div class="wheel-container">
-            <img src="./images/wheel.png" alt="">
+            <img src="./images/wheel.png" alt="Rueda de bicicleta decorativa">
          </div>
          <section>
             <div>
-               <img class="border-radius-right" src="./images/home03.jpg" alt="">
+               <img class="border-radius-right" src="./images/home03.jpg" alt="Sillas adaptables para cicloturismo">
             </div>
             <div class="description-buttons">
                <h1>
                   Haz una pausa sin renunciar a la comodidad. ¡Prueba nuestras 
                   sillas adaptables!
                </h1>
-               <button id="ver_sillas" class="primary-button">Ver Sillas</button>
+               <button id="ver_sillas" class="primary-button" aria-label="Ver sillas adaptables">Ver Sillas</button>
             </div>
          </section>
          <div class="wheel-container">
-            <img src="./images/wheel.png" alt="">
+            <img src="./images/wheel.png" alt="Rueda de bicicleta decorativa">
          </div>
          <section>
             <div class="description-buttons">
@@ -108,11 +110,11 @@
                   Enfrenta el frío sin límites: ropa de invierno diseñada para 
                   cicloturistas.
                </h1>
-               <button id="ver_coleccion" class="primary-button">Ver Colección</button>
+               <button id="ver_coleccion" class="primary-button" aria-label="Ver colección de ropa de invierno">Ver Colección</button>
             </div>
             <div>
-               <a href="#home">
-                  <img src="./images/home04.png" class="border-radius-left" alt="">
+               <a href="#home" aria-label="Volver al inicio de la página">
+                  <img src="./images/home04.png" class="border-radius-left" alt="Imagen promocional de la ropa de invierno">
                </a>
             </div>
          </section>
@@ -121,24 +123,30 @@
          <section>
             <div>
                <h2>EMPRESA</h2>
-               <p><a href="sobre_nosostros.html">Sobre Nosotros</a></p>
-               <p><a href="contacto.html">Contacto</a></p>
+               <p><a href="sobre_nosostros.html" aria-label="Información sobre la empresa">Sobre Nosotros</a></p>
+               <p><a href="contacto.html" aria-label="Página de contacto">Contacto</a></p>
             </div>
             <div>
                <h2>COMPRAR</h2>
-               <p><a href="equipment.html">Equipamiento</a></p>
-               <p><a href="equipment.html">Adultos</a></p>
-               <p><a href="equipment.html">Niños</a></p>
+               <p><a href="equipment.html" aria-label="Ver equipamiento para cicloturismo">Equipamiento</a></p>
+               <p><a href="equipment.html" aria-label="Equipamiento para adultos">Adultos</a></p>
+               <p><a href="equipment.html" aria-label="Equipamiento para niños">Niños</a></p>
             </div>
          </section>
          <section>
-            <img src="./images/logo.png" alt="logo.png" width="100">
+            <img src="./images/logo.png" alt="Logo de Benali" width="100">
          </section>
          <section>
             <div class="icons">
-               <img src="./images/fb-icon.png" alt="fb-icon.png">
-               <img src="./images/insta-icon.png" alt="insta-icon.png">
-               <img src="./images/twitter-icon.png" alt="twitter-icon.png">
+               <a href="https://www.facebook.com" aria-label="Ir a nuestra página de Facebook">
+                  <img src="./images/fb-icon.png" alt="Ícono de Facebook">
+               </a>
+               <a href="https://www.instagram.com" aria-label="Ir a nuestra página de Instagram">
+                  <img src="./images/insta-icon.png" alt="Ícono de Instagram">
+               </a>
+               <a href="https://www.twitter.com" aria-label="Ir a nuestra página de Twitter">
+                  <img src="./images/twitter-icon.png" alt="Ícono de Twitter">
+               </a>
             </div>
             <div>
                <p>&copy; 2024 Benali. Todos los derechos están reservados</p>
