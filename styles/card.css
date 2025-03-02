@@ -8,6 +8,18 @@
     --place-holder-opacity: 51%;
 }
 
+#add-card {
+    background-color: var(--form-label-color);
+}
+
+#add-card:hover {
+    background-color: #fff;
+}
+
+#volver:hover {
+    background-color: var(--form-label-color);
+}
+
 .tarjeta {
     width: 100%;
     min-height: 100vh;
@@ -17,6 +29,7 @@
 .tarjeta h1 {
     text-align: center;
     padding-block: 1em;
+    color: var(--form-label-color);
 }
 
 .tarjeta form {

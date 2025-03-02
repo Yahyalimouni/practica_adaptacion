@@ -62,9 +62,9 @@
         <form action="">
             <h2>Forma de pago</h2>
             <div class="formas-pago">
-                <button><img src="./images/master_card.png" alt=""></button>
-                <button><img src="./images/visa.png" alt=""></button>
-                <button><img src="./images/paypal.png" alt=""></button>
+               <button aria-label="Pagar con MasterCard"><img src="./images/master_card.png" alt="MasterCard logo"></button>
+               <button aria-label="Pagar con Visa"><img src="./images/visa.png" alt="Visa logo"></button>
+               <button aria-label="Pagar con PayPal"><img src="./images/paypal.png" alt="PayPal logo"></button>               
             </div>
             <fieldset>
                 <div class="row">
@@ -88,8 +88,8 @@
                 </div>
             </fieldset>
             <div class="buttons-group">
-                <button class="secondary-button">Volver al carrito</button>
-                <button class="primary-button">Añadir tarjeta</button>
+                <button class="secondary-button" id="volver" aria-label="Boton para Volver al carrito">Volver al carrito</button>
+                <button class="primary-button" id="add-card" aria-label="Boton para Añadir tarjeta">Añadir tarjeta</button>
             </div>
         </form>
       </main>
