@@ -136,6 +136,7 @@
         padding: 1.2em;
         min-height: 70vh;
         padding: 5em 0.2em;
+        margin-bottom: 3em;
     }
     
     .index section div:has(h1) {
@@ -169,6 +170,7 @@
     }
 
     .wheel-container {
+        display: none;
         opacity: 1 !important;
         animation-range: entry 0% cover 100%;
     }
